@@ -29,7 +29,7 @@ class CardListView extends StatelessWidget {
         );
       },
       options: CarouselOptions(
-        height: height / 6,
+        height: height / 6.5,
         viewportFraction: width < 800 ? 0.6 : 0.5,
         initialPage: 0,
         enableInfiniteScroll: true,

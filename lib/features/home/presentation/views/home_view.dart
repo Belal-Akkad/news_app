@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/functions/get_responsive_size.dart';
-import 'package:news_app/features/home/presentation/manager/general_news_cubit/world_news_cubit.dart';
-
+import 'package:news_app/features/home/presentation/manager/world_news_cubit/world_news_cubit.dart';
 import 'package:news_app/features/home/presentation/manager/them_cubit/theme_cubit.dart';
 import 'package:news_app/features/home/presentation/views/widgets/custom_app_bar_title.dart';
 import 'package:news_app/features/home/presentation/views/widgets/home_view_body_builder.dart';
@@ -39,7 +38,6 @@ class _HomeViewState extends State<HomeView> {
               },
               child: SwitchButton(),
             ),
-            const SizedBox(width: 12),
           ],
         ),
         body: HomeViewBodyBuilder(),

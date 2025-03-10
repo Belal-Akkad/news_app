@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/features/home/presentation/manager/card_news_cubit/card_news_cubit.dart';
-import 'package:news_app/features/home/presentation/manager/general_news_cubit/world_news_cubit.dart';
+import 'package:news_app/features/home/presentation/manager/world_news_cubit/world_news_cubit.dart';
 import 'package:news_app/features/home/presentation/manager/them_cubit/theme_cubit.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';

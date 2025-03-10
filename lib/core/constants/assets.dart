@@ -1,37 +1,22 @@
-// ignore_for_file: prefer_single_quotes
 class Assets {
   Assets._();
-  
-  /// Assets for assetsImagesBusiness
-  /// lib/assets/images/business.jpg
-  static const String assetsImagesBusiness = "lib/assets/images/business.jpg";
 
-  /// Assets for assetsImagesEntertaiment
-  /// lib/assets/images/entertaiment.jpg
-  static const String assetsImagesEntertaiment = "lib/assets/images/entertaiment.jpg";
+  static const String assetsImagesBusiness = "assets/images/business.jpg";
 
-  /// Assets for assetsImagesHealth
-  /// lib/assets/images/health.avif
-  static const String assetsImagesHealth = "lib/assets/images/health.avif";
+  static const String assetsImagesEntertaiment =
+      "assets/images/entertaiment.jpg";
 
-  /// Assets for assetsImagesInvalid
-  /// lib/assets/images/invalid.jpg
-  static const String assetsImagesInvalid = "lib/assets/images/invalid.jpg";
+  static const String assetsImagesHealth = "assets/images/health.avif";
 
-  /// Assets for assetsImagesNewsLogo
-  /// lib/assets/images/news_logo.jpg
-  static const String assetsImagesNewsLogo = "lib/assets/images/news_logo.jpg";
+  static const String assetsImagesInvalid = "assets/images/invalid.jpg";
 
-  /// Assets for assetsImagesScience
-  /// lib/assets/images/science.avif
-  static const String assetsImagesScience = "lib/assets/images/science.avif";
+  static const String assetsImagesNewsLogo = "assets/images/news_logo.jpg";
 
-  /// Assets for assetsImagesSports
-  /// lib/assets/images/sports.jpg
-  static const String assetsImagesSports = "lib/assets/images/sports.jpg";
+  static const String assetsImagesScience = "assets/images/science.avif";
 
-  /// Assets for assetsImagesTechnology
-  /// lib/assets/images/technology.jpeg
-  static const String assetsImagesTechnology = "lib/assets/images/technology.jpeg";
+  static const String assetsImagesSports = "assets/images/sports.jpg";
+
+  static const String assetsImagesTechnology = "assets/images/technology.jpeg";
+
+  static const String assetsImagesAppIcon = 'assets/images/app_icon.jpg';
 }
-

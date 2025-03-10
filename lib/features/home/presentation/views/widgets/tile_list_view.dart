@@ -21,7 +21,7 @@ class TileListView extends StatelessWidget {
       options: CarouselOptions(
         padEnds: false,
         scrollPhysics: const BouncingScrollPhysics(),
-        viewportFraction: 0.75,
+        viewportFraction: 0.6,
         enableInfiniteScroll: false,
         reverse: false,
         enlargeCenterPage: true,

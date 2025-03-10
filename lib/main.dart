@@ -1,19 +1,23 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/core/utilities/my_them_data.dart';
 import 'package:news_app/core/utilities/setup_service_locator.dart';
 import 'package:news_app/features/home/data/home_repository_implementation.dart';
 import 'package:news_app/features/home/presentation/manager/card_news_cubit/card_news_cubit.dart';
-import 'package:news_app/features/home/presentation/manager/general_news_cubit/world_news_cubit.dart';
+import 'package:news_app/features/home/presentation/manager/world_news_cubit/world_news_cubit.dart';
 import 'package:news_app/features/home/presentation/manager/them_cubit/theme_cubit.dart';
 import 'package:news_app/features/home/presentation/manager/them_cubit/theme_state.dart';
 import 'package:news_app/features/home/presentation/views/category_news_view.dart';
 import 'package:news_app/features/home/presentation/views/home_view.dart';
 import 'package:news_app/features/home/presentation/views/details_news_view.dart';
 
-void main() async {
+void main() {
   setupServiceLoacator();
-  runApp(const MyApp());
+  runApp(DevicePreview(
+    enabled: false,
+    builder: (context) => const MyApp(), // Wrap your app
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -39,6 +43,9 @@ class MyApp extends StatelessWidget {
         builder: (context, state) {
           var themeCubit = ThemeCubit.get(context);
           return MaterialApp(
+            useInheritedMediaQuery: true,
+            locale: DevicePreview.locale(context),
+            builder: DevicePreview.appBuilder,
             routes: {
               '/home': (context) => const HomeView(),
               '/details': (context) => const DetailsNewsView(),

@@ -11,29 +11,34 @@ class SwitchButton extends StatelessWidget {
   Widget build(BuildContext context) {
     var themeCubit = ThemeCubit.get(context);
     bool darkMode = themeCubit.isDark;
-    return Container(
+    return Padding(
       padding: EdgeInsets.all(getResponsiveSize(context, 4)),
-      decoration: BoxDecoration(
-        border: Border.all(
-          width: getResponsiveSize(context, 1),
-          color: darkMode ? Colors.white : Colors.black,
-        ),
-        borderRadius: BorderRadius.circular(getResponsiveSize(context, 8)),
-      ),
-      child: Row(
-        children: [
-          Icon(
-            Icons.wb_sunny,
-            color: darkMode ? Colors.grey : Colors.lightBlueAccent,
-            size: getResponsiveSize(context, 20),
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(
+            width: getResponsiveSize(context, 1),
+            color: darkMode ? Colors.white : Colors.black,
           ),
-          const SizedBox(width: 6),
-          Icon(
-            Icons.nightlight_round,
-            color: darkMode ? Colors.orange : Colors.grey,
-            size: getResponsiveSize(context, 20),
-          )
-        ],
+          borderRadius: BorderRadius.circular(getResponsiveSize(context, 22)),
+        ),
+        child: Padding(
+          padding: EdgeInsets.all(getResponsiveSize(context, 8)),
+          child: Row(
+            children: [
+              Icon(
+                Icons.wb_sunny,
+                color: darkMode ? Colors.grey : Colors.lightBlueAccent,
+                size: getResponsiveSize(context, 18),
+              ),
+              SizedBox(width: getResponsiveSize(context, 6)),
+              Icon(
+                Icons.nightlight_round,
+                color: darkMode ? Colors.orange : Colors.grey,
+                size: getResponsiveSize(context, 18),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
